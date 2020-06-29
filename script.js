@@ -28,7 +28,7 @@ $("#button").click(function(event) {
         console.log("Temperature (F): " + response.main.temp);
         // get icon for weather condition
         var iconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
-        var imgDiv = $(".icon").append($("<img>").attr("src", iconURL))
+        $(".icon").append($("<img>").attr("src", iconURL))
     })
 
     var longitude = response.coord.lon;
