@@ -20,13 +20,26 @@ $("#button").click(function(event) {
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
 
         var windSpeed = response.wind.speed;
-        $(".wind").html("<p>Wind Speed: " + windSpeed + "</p>");
+        $(".wind").html("Wind Speed:" + windSpeed);
         $(".humidity").text("Humidity: " + response.main.humidity);
         $(".temp").text("Temperature (F) " + response.main.temp);
         console.log("Wind Speed: " + response.wind.speed);
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F): " + response.main.temp);
-
+        // get icon for weather condition
+        var iconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
+        var imgDiv = $(".icon").append($("<img>").attr("src", iconURL))
     })
+
+    var longitude = response.coord.lon;
+    var latitude = response.coord.lat;
+    var quaryurlUVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat" + latitude + "&lon" + longitude;
+    $.ajax({
+        url: quaryurlUVIndex,
+        method: "GET"
+    }).then(function(response) {
+        console.log(quaryurlUVIndex)
+    })
+
 
 })
