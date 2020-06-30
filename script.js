@@ -1,5 +1,6 @@
 // API key 
 var APIKey = "e8baafedb4333fd54c93edc9a7b634f4";
+//event button listener
 $("#button").click(function(event) {
     event.preventDefault();
     newCity = $("#text").val().trim();
@@ -51,7 +52,7 @@ $("#button").click(function(event) {
             $(".latitude").text("latitude:" + response[0].lat);
         })
     }
-
+    //fiveday forcast begins 
     function getfiveDayForcast(city) {
         var quaryfiveDayFor = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + APIKey;
         $.ajax({
@@ -72,12 +73,3 @@ $("#button").click(function(event) {
     }
 
 })
-
-// function color() {
-//     if (index <= 2) {
-//         $("#index-num").removeClass();
-//         $("#index-num").addClass("uv-low");
-
-//     } else if (6 <= index && index <= 7) {
-//         $("#index-num").removeClass();
-//         $("#index-num").addClass("uv-high");
