@@ -14,48 +14,49 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="topBar" style="padding-left: 40%;">Weather Dashboard</h1>
-    </div>
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation" style="padding-left:40%;">
+        <div class="navbar-brand">
+            <h1> Weather Dashboard</h1>
+        </div>
+    </nav>
+
     <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
+        <div class="tile is-3 is-vertical is-parent">
             <div class="tile is-child box">
                 <p class="title">Where</p>
-                <p>Rain or Shine.</p>
+                <p>Rise & Shine.</p>
                 <input type="text" class="form-control" placeholder="ex. San Francisco" id=text aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary bg-primary" type="button" id="button"><i class="fa fa-search bg-primary" aria-hidden="true"></i></button>
                 </div>
             </div>
+            <!-- Previous weather list  -->
             <div class="tile is-child box">
-                <p class="title">Two</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                <p class="title ">Last search</p>
+                <div class="history">
+                </div>
             </div>
         </div>
-        <div class="tile is-parent">
+        <div class="tile is-8 is-vertical is-parent">
             <div class="tile is-child box">
-                <div class="city"></div>
-                <div class="wind"></div>
-                <div class="humidity"></div>
-                <div class="temp"></div>
-                <div class="icon"> </div>
-                <div class="longitude"></div>
-                <div class="latitude"></div>
+                <div class="currentDay">
+                    <div class="city"></div>
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
+                    <div class="temp"></div>
+                    <div class="icon"> </div>
+                    <div class="longitude"></div>
+                    <div class="latitude"></div>
+                </div>
             </div>
-        </div>
-    </div>
-    <!-- <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div> -->
+            <div class="tile is-child">
+                <div class="tile is ancestor fiveDayForcast row">
 
-    <!-- <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="ex. San Francisco" id=text aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary bg-primary" type="button" id="button"><i class="fa fa-search bg-primary" aria-hidden="true"></i></button>
+                </div>
+            </div>
         </div>
-    </div> -->
     </div>
+
 
 
 
