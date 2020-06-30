@@ -16,6 +16,7 @@ $("#button").click(function(event) {
 
 
 
+
     // Ajax and search begins
     const quaryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + newCity + "&units=imperial&appid=" + APIKey;
 
